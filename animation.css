@@ -1,0 +1,51 @@
+
+.box {
+    height: 450px;
+    width: 450px;
+    background-color: tomato;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    animation-name: new;
+    animation-duration: 2s;
+    font-size: 50px;
+    transform: rotate(45deg);
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(.17,.67,.82,.35);
+}
+
+h3 {
+    text-align: center;
+    position: relative;
+    top: 40%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: teal;
+    transform: rotate(-45deg);
+    transition: transform 3s cubic-bezier(.17,.67,.82,.35); /* Apply the same transition as in .box */
+}
+
+.box:hover {
+    width: 250px;
+    border-radius: 50%;
+    background-color: rgb(26, 200, 104);
+    transform: rotate(180deg);
+}
+
+.box:hover h3 {
+    transform: rotate(180deg) scale(0.7); /* Set rotation to 0 degrees and scale down by 70% */
+}
+
+@keyframes new {
+    0% { background-color: green; }
+    10% { background-color: blue; }
+    20% { background-color: darkturquoise; }
+    30% { background-color: darkorchid; }
+    40% { background-color: khaki; }
+    50% { background-color: palegreen; }
+    60% { background-color: greenyellow; }
+    70% { background-color: lightseagreen; }
+    80% { background-color: lightgray; }
+    90% { background-color: aqua; }
+    100% { background-color: darkcyan; }
+}
